@@ -54,7 +54,8 @@ signs data set:
 #### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
-
+![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count.png)
+![alt text]( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count_after.png)
 ![alt text][image1]
 
 ### Design and Test a Model Architecture
