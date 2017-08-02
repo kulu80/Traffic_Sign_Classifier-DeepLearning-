@@ -42,19 +42,23 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+Before the the data set summary and exploration the first task is to load the dataset to the working juyter notebook. There data sets are loaded, the frist is set is training set and the second set is the validation set, the last dataset is the testing set. 
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+After the loading the data sets into the jupyter notebook a summary of was made for each of the data set which conists of different traffic sign images. The numpy libaray is used for this part. The folllowing is the summayr statistic for about the data sets. 
+
+
+* The size of training set is = 34799
+* The size of the validation set is = 4410
+* The size of test set is = 12630
+* The shape of a traffic sign image is = (32, 32, 3)
+* The number of unique classes/labels in the data set is = 43
 
 #### 2. Include an exploratory visualization of the dataset.
+I moastly used the pands liberary and seaborn for data manipulation and data isualization of the traffic data set. The fist thing that I do is to explore the number of each (frequence/occurence) of each classes in the triaining data set. This important to know the nature of distribution the data set, if skwed to one class it greatly affects the performance of a model. The following bargraph dipicts the distribution of each classes of the traffic sign images for the training data set. 
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 ![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count.png)
+
+
 ![alt text]( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count_after.png)
 ![alt text][image1]
 
