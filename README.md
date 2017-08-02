@@ -54,10 +54,15 @@ After the loading the data sets into the jupyter notebook a summary of was made 
 * The number of unique classes/labels in the data set is = 43
 
 #### 2. Include an exploratory visualization of the dataset.
-I moastly used the pands liberary and seaborn for data manipulation and data isualization of the traffic data set. The fist thing that I do is to explore the number of each (frequence/occurence) of each classes in the triaining data set. This important to know the nature of distribution the data set, if skwed to one class it greatly affects the performance of a model. The following bargraph dipicts the distribution of each classes of the traffic sign images for the training data set. 
+Fisrt let us have an understanding of  some of the traffic signs that the training data set consists of. The following figure show the plot of randomly selected images for this data set. 
 
 ![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count.png)
 
+I mostly used the pandas liberary and seaborn for data manipulation and data isualization of the traffic data set. The fist thing that I do is to explore the number of each (frequence/occurence) of each classes in the triaining data set. This important to know the nature of distribution the data set, if skwed to one class it greatly affects the performance of a model. The following bargraph dipicts the distribution of each classes of the traffic sign images for the training data set. 
+
+![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count.png)
+
+As it can be percieved from the bar graph above, the distribution of classes of images in not  uniform or Guassian. The distribution could show the natural occurence or frequency of traffic signs on the road or it might not. The most frequeenct traffic sign (image) in the training data set is the 50km/hr speed limit sign (which is labeled as 2) and the least frquent traffic sign is the 20 km/hr speed limit (which is labeled as 0). About 27 of the traffic signs have frquency of less than 1000 and for traffic sign frquency less than 1000 I increased the frquecy of each to 1400 to get a uniform distribution for most of the classes. The figure below shows the distribution of the traffic sign classes after the modification performed. 
 
 ![alt text]( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count_after.png)
 ![alt text][image1]
