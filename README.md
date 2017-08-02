@@ -54,6 +54,7 @@ After the loading the data sets into the jupyter notebook a summary of was made 
 * The number of unique classes/labels in the data set is = 43
 
 #### 2. Include an exploratory visualization of the dataset.
+##### Visualization
 Fisrt let us have an understanding of  some of the traffic signs that the training data set consists of. The following figure show the plot of randomly selected images for this data set and with thier assigned label number. 
 
 ![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/traffic_sign_image1.png)
@@ -66,6 +67,15 @@ As it can be percieved from the bar graph above, the distribution of classes of 
 
 ![alt text]( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count_after.png)
 ![alt text][image1]
+
+##### Image Agumentation
+The challenge of application of  convolution nuaral Network or deep learning in general  for immage classiffication is that it demands huge data to be availabe so that to have a fine working model. One of the ways to solve luck of data use image agumentation which require to transform the availables image data by applying different image processsing techniques. There are many libraray that works with python to achieve image agumentation. Here,I used the OpenCV library (cv2) to transform images.OpenCV provides two transformation functions, ** cv2.warpAffine ** and **cv2.warpPerspective ** , with which you can have all kinds of transformations [http://docs.opencv.org/trunk/da/d6e/tutorial_py_geometric_transformations.html](http://docs.opencv.org/trunk/da/d6e/tutorial_py_geometric_transformations.html). 
+
+For this project I only have used image rotation transformation. I have rotated each image with angles which range between -10 and 10 with 2 degree intervals which increase the number of training images from about 34,000 to  more than 600,000 by many folds. It is also recommended to convert images into gray scale to impove model performance, however I have tried to normalize and converted the images to gray scale which didn't imporve model performance. Though I included the codes in the project I didn't use them in the model development process due to the stated reason. 
+
+
+
+
 
 ### Design and Test a Model Architecture
 
@@ -114,10 +124,12 @@ To train the model, I used an ....
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
+I first tried to train the model with out making any image modification and transformation at which the validation accuracy never jumps above 0.75. Then next I have applied normalization  and converting to gray-scale procedures to all images: training and validation sets but sill the validation accuracy never approachs to 90% . After applied a rotation transformation which rotates the all images in the range of angles between -10 and 10 with a step of 2 degree interval using OpenCV liberary(cv2). This transformation not only increases the number of training sets and validation sets conmibed to more than 650,000 images but also jumps the validation accuracy to cloth to 99% with only 20 iterations made. I also have applied normalization and gray-scale converion after rotaion transformation on images was applied, however din't imporve model performance while in the contrary. I also have tried to modifiy the model architecture given above however never was I lucky to get model accurcy to above 50%. Then decided to stick the model architecture provided in the above section.  
+
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of = 99.9
+* validation set accuracy of = 99.9
+* test set accuracy of =94.6
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
