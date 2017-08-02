@@ -54,9 +54,9 @@ After the loading the data sets into the jupyter notebook a summary of was made 
 * The number of unique classes/labels in the data set is = 43
 
 #### 2. Include an exploratory visualization of the dataset.
-Fisrt let us have an understanding of  some of the traffic signs that the training data set consists of. The following figure show the plot of randomly selected images for this data set. 
+Fisrt let us have an understanding of  some of the traffic signs that the training data set consists of. The following figure show the plot of randomly selected images for this data set and with thier assigned label number. 
 
-![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count.png)
+![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/traffic_sign_image1.png)
 
 I mostly used the pandas liberary and seaborn for data manipulation and data isualization of the traffic data set. The fist thing that I do is to explore the number of each (frequence/occurence) of each classes in the triaining data set. This important to know the nature of distribution the data set, if skwed to one class it greatly affects the performance of a model. The following bargraph dipicts the distribution of each classes of the traffic sign images for the training data set. 
 
