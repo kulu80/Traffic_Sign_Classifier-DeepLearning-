@@ -85,7 +85,8 @@ It is recommended to convert images into gray scale to impove model performance,
 ![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/traffic_sign_image1.png)
 
 ##### After histogram-equalization
-![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/hist_equalizer.png
+![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/hist_equalizer.png)
+
 
 ##### Image Agumentation
 
