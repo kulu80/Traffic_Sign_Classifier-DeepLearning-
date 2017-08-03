@@ -68,10 +68,6 @@ As it can be percieved from the bar graph above, the distribution of classes of 
 ![alt text]( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count_after.png)
 ![alt text][image1]
 
-##### Image Agumentation
-The challenge of application of  convolution nuaral Network or deep learning in general  for immage classiffication is that it demands huge data to be availabe so that to have a fine working model. One of the ways to solve luck of data use image agumentation which require to transform the availables image data by applying different image processsing techniques. There are many libraray that works with python to achieve image agumentation. Here,I used the OpenCV library (cv2) to transform images.OpenCV provides two transformation functions, ** cv2.warpAffine ** and **cv2.warpPerspective ** , with which you can have all kinds of transformations [http://docs.opencv.org/trunk/da/d6e/tutorial_py_geometric_transformations.html](http://docs.opencv.org/trunk/da/d6e/tutorial_py_geometric_transformations.html). 
-
-For this project I only have used image rotation transformation. I have rotated each image with angles which range between -10 and 10 with 2 degree intervals which increase the number of training images from about 34,000 to  more than 600,000 by many folds. It is also recommended to convert images into gray scale to impove model performance, however I have tried to normalize and converted the images to gray scale which didn't imporve model performance. Though I included the codes in the project I didn't use them in the model development process due to the stated reason. 
 
 
 
@@ -79,8 +75,27 @@ For this project I only have used image rotation transformation. I have rotated 
 
 ### Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
+##### pre-processing
+
+It is recommended to convert images into gray scale to impove model performance, first I converted all images to gray-scale and also apply normalization and tried to train the model,however both prepocessing techniques  didn't imporve model performance. Though I included the codes in the project I didn't use them in the model development process due to the stated reason. I used another preprocessing technique, the histogram-equalization which improves model performance. The histogram equalizer imporves image contrast by allowing for areas of lower local contrast to gain a higher contrast. Histogram equalization accomplishes this by effectively spreading out the most frequent intensity values [https://en.wikipedia.org/wiki/Histogram_equalization](https://en.wikipedia.org/wiki/Histogram_equalization). The first figure below shows the orignal images and the second is after histogram equalizer applied. 
+
+##### Orignal images
+![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/traffic_sign_image1.png)
+
+##### After histogram-equalization
+![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/hist_equalizer.png
+
+##### Image Agumentation
+
+The challenge of application of  convolution neural network or deep learning in general  for immage classiffication is that it demands huge data to be availabe so that to have a fine working model. One of the ways to solve luck of data is to use image agumentation technique, which require to transform the availables image data by applying different image processsing techniques. There are many libraray that works with python to achieve image agumentation. Here,I used the OpenCV library (cv2) to transform images.OpenCV provides two transformation functions, ** cv2.warpAffine ** and **cv2.warpPerspective ** , with which you can have all kinds of transformations [http://docs.opencv.org/trunk/da/d6e/tutorial_py_geometric_transformations.html](http://docs.opencv.org/trunk/da/d6e/tutorial_py_geometric_transformations.html). 
+
+For this project I only have used image rotation transformation. I have rotated each image with angles which ranges between -10 and 10 with 2 degree intervals which increase the number of training images from about 34,000 to  more than 600,000 by many folds. 
+
+
+
+ 
 As a first step, I decided to convert the images to grayscale because ...
 
 Here is an example of a traffic sign image before and after grayscaling.
