@@ -71,13 +71,11 @@ As it can be percieved from the bar graph above, the distribution of classes of 
 
 
 
-
-
 ### Design and Test a Model Architecture
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-##### pre-processing
+##### Pre-processing
 
 It is recommended to convert images into gray scale to impove model performance, first I converted all images to gray-scale and also apply normalization and tried to train the model,however both prepocessing techniques  didn't imporve model performance. Though I included the codes in the project I didn't use them in the model development process due to the stated reason. I used another preprocessing technique, the histogram-equalization which improves model performance. The histogram equalizer imporves image contrast by allowing for areas of lower local contrast to gain a higher contrast. Histogram equalization accomplishes this by effectively spreading out the most frequent intensity values [https://en.wikipedia.org/wiki/Histogram_equalization](https://en.wikipedia.org/wiki/Histogram_equalization). The first figure below shows the orignal images and the second is after histogram equalizer applied. 
 
@@ -134,7 +132,7 @@ My final model consisted of the following layers:
  
 
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used an ....
 
