@@ -113,7 +113,7 @@ My final model results were:
 * validation set accuracy of = 99.9
 * test set accuracy of =94.6
 
-![alt text]( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/validation_graph.png)
+![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/validation_graph.png.png )
    
 
 If an iterative approach was chosen:
