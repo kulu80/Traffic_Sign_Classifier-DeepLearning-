@@ -135,7 +135,7 @@ If a well known architecture was chosen:
 
 To test the model's skills in predicting new images , I have taken about 24 traffic sign images from the internet and processied the images to imput them into the model. I have applied histogram equlizer on the new images. The following are the new traffic sign images I used for assessing model's skills in predicting new images. 
 
-![alt text][( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/new_images.png)] 
+![alt text]( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/new_images.png) 
 
 The first image might be difficult to classify because ...
 
