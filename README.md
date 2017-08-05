@@ -94,6 +94,10 @@ In this project the LeNet model architeture show below is used with out many mod
 
 ![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/lenet.png)
 
+ (The LeNet model architecture LeCun et al,1998 [http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf))
+ 
+ The LeNet architecture consists of two sets of convolutional layer,activation and pooling layers followed by a fullly-connected layer activation and another fully-connected layer and finally a softmax classifier as detailed in the table below. 
+
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
@@ -124,6 +128,7 @@ My final model results were:
 * test set accuracy of =94.6
 
 ![alt text]( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/validation_graph.png)
+   
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
