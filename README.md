@@ -116,18 +116,6 @@ My final model results were:
 ![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/validation_graph.png.png )
    
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
 
 ### Test a Model on New Images
 
@@ -137,19 +125,19 @@ To test the model's skills in predicting new images , I have taken about 24 traf
 
 ![alt text]( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/new_images.png) 
 
-The first image might be difficult to classify because ...
+Generally speaking the new images I have taken from the web are some times different in shape than the ones in the training image. For instance one of the shape of the traffic sign of the new image is diamond while the ones in the training image are traingular. This might impact the model's skill in predicting new images. Though the model have difficaulits in identifying most of the new images properly. Among the 24  new images feed into the model, only 6 of the images were identified correctly. The other factor that impedes models ablity to predict the new images correcly might be that, in some of the new images, the traffic signs only occupies a small portion of the images while the remaining of the space is covered by some other back grouds objects. Some traffic images have also painted in a different color than the training images which may also have some effect on the model's skills in predicting new images correcly. 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-Here are the results of the prediction:
+Here are the results of the prediction for the first five images , the remaining image prediction can be veiwed in the source code:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Traffic Signal      		| Beware of ice/snow   									| 
+| Speed limit-120km/hr     			| Speed limit-100km/hr									|
+| Road work					| Keep right											|
+| Speed limit-30km/hr	      		| Speed limit -30km/hr				 				|
+| Round about mandatory			| Round about mandatory      							|
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
@@ -160,54 +148,61 @@ The code for making predictions on my final model is located in the 11th cell of
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
+For the first image: Traffic Signal
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 9.99931335e-01         			| Beware of ice/snow  									| 
+| 6.41386941e-05     				| Right-of-way at the next intersection 										|
+| 4.50600510e-06					| turn left ahead										|
+| 4.17046628e-08	      			| Children crossing					 				|
+| 1.40101379e-08				    | Speed limit (60km/hr)      							|
 
 
-For the second image ... 
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the third image
+For the second image : Speed limit(120km/hr)
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 9.99510407e-01        			| Speed limit(100km/hr)   									| 
+| 4.89575148e-04    				| Speed limit (80km/hr) 										|
+| 4.00497449e-08				| Speed limit (30km/hr)											|
+| 2.75348833e-09	      			| Speed limit (50km/hr)					 				|
+| 8.70095052e-10				    | Speed limit (70km/hr)      							|
 
 
-For the fourth image
+For the third image: Road work
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-for the fifth image
+| 6.91122949e-01         			| Keep right   									| 
+| 2.75643736e-01     				| Speed limit (30km/hr) 										|
+| 2.96202227e-02					| Right-of-way at the next intersection											|
+| 2.02056044e-03	      			| Priority road					 				|
+| 7.88826961e-04				    | Roundabout      							|
 
 
+For the fourth image:Speed limit(30km/hr)
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 9.99241114e-01        			| Speed limit (30km/hr)  									| 
+| 7.51638901e-04     				| Priority road 										|
+| 6.62292450e-06					| keep right											|
+| 3.57300564e-07	      			| Speed limit (100 km/hr)					 				|
+| 1.62742467e-07				    | End of speed limt (80km/hr)     							|
+
+for the fifth image : Roundabout mandatory
+
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 9.94467020e-01         			| Roundabout mandatory   									| 
+| 3.20999022e-03     				| Speed limit (100km/hr) 										|
+| 1.43490930e-03					| Ahead only											|
+|  6.39866048e-04	      			| Turn left ahead					 				|
+| 1.73360706e-04				    | Speed limit (50km/hr)      							|
 
 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+
 
 
