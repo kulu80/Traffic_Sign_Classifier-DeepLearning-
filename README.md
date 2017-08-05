@@ -92,7 +92,7 @@ The difference between the original data set and the augmented data set is the f
 
 In this project the LeNet model architeture show below is used with out many modification. I have tried to change convolution layer size and stride size and the resuling architucture didn't improve the model performance. Then stick to  the original LeNet Architucture, the difference here was I used the dropout regularization at the second convolutional and fullly connected layer to reduce model overfitting. 
 
-![alt text]( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/visualize.png)
+![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/lenet.png)
 
 My final model consisted of the following layers:
 
