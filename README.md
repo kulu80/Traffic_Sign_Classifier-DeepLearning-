@@ -1,9 +1,4 @@
 # **Traffic Sign Recognition** 
-
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Build a Traffic Sign Recognition Project**
@@ -16,28 +11,7 @@ The goals / steps of this project are the following:
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-
-[//]: # (Image References)
-
-[https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count.png]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
-
-## Rubric Points
-### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
-
 ---
-### Writeup / README
-
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
-
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
-
 ### Data Set Summary & Exploration
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
@@ -115,6 +89,10 @@ The difference between the original data set and the augmented data set is the f
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+
+In this project the LeNet model architeture show below is used with out many modification. I have tried to change convolution layer size and stride size and the resuling architucture didn't improve the model performance. Then stick to  the original LeNet Architucture, the difference here was I used the dropout regularization at the second convolutional and fullly connected layer to reduce model overfitting. 
+
+![alt text]( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/visualize.png)
 
 My final model consisted of the following layers:
 
@@ -202,6 +180,42 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 
 For the second image ... 
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .60         			| Stop sign   									| 
+| .20     				| U-turn 										|
+| .05					| Yield											|
+| .04	      			| Bumpy Road					 				|
+| .01				    | Slippery Road      							|
+
+
+For the third image
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .60         			| Stop sign   									| 
+| .20     				| U-turn 										|
+| .05					| Yield											|
+| .04	      			| Bumpy Road					 				|
+| .01				    | Slippery Road      							|
+
+
+For the fourth image
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .60         			| Stop sign   									| 
+| .20     				| U-turn 										|
+| .05					| Yield											|
+| .04	      			| Bumpy Road					 				|
+| .01				    | Slippery Road      							|
+
+for the fifth image
+
+
+
+
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
