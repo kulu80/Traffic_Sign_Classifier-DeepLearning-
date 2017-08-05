@@ -64,28 +64,10 @@ It is recommended to convert images into gray scale to impove model performance,
 
 The challenge of application of  convolution neural network or deep learning in general  for immage classiffication is that it demands huge data to be availabe so that to have a fine working model. One of the ways to solve luck of data is to use image agumentation technique, which require to transform the availables image data by applying different image processsing techniques. There are many libraray that works with python to achieve image agumentation. Here,I used the OpenCV library (cv2) to transform images.OpenCV provides two transformation functions, ** cv2.warpAffine ** and **cv2.warpPerspective ** , with which you can have all kinds of transformations [http://docs.opencv.org/trunk/da/d6e/tutorial_py_geometric_transformations.html](http://docs.opencv.org/trunk/da/d6e/tutorial_py_geometric_transformations.html). 
 
-For this project I only have used image rotation transformation. I have rotated each image with angles which ranges between -10 and 10 with 2 degree intervals which increase the number of training images from about 34,000 to  more than 600,000 by many folds. 
+For this project I only have used image rotation transformation. I have rotated each image with angles which ranges between -10 and 10 with 2 degree intervals which increase the number of training images from about 34,000 to  more than 600,000 by many folds. The figure below quantitative distribution of each lable in the image data after the process of image augumentation. 
 
+![alt text](https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/total_count_after.png)
 
-
- 
-As a first step, I decided to convert the images to grayscale because ...
-
-Here is an example of a traffic sign image before and after grayscaling.
-
-![alt text][image2]
-
-As a last step, I normalized the image data because ...
-
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -120,14 +102,14 @@ My final model consisted of the following layers:
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+After the pre-processing of the orignal images and an additional data set was added from image agumentation,the data was splitted into training and validation sets. The data set was also shuffled to make the distribution of data in the two sets randomly distributed. I have tried to train the model employing different batch sizes such as 128,512 and 1024 keeping all other things the same. I found that the model performs better when the batch size was set to 1024. For the sake of comutational time and resources I have keept the number of epochs to 30 , actaully I have also tried to set the number of epochs to 50,100,200 and 300 when I started to train the model, however I didn't see much improvement in model performance. When I start the model I set the learning rate at 0.001 and also later tried learning rate of 0.0001. But I only haveg got imporvement when the learning rate was set to 0.0009 which is the final value for this model.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 I first tried to train the model with out making any image modification and transformation at which the validation accuracy never jumps above 0.75. Then next I have applied normalization  and converting to gray-scale procedures to all images: training and validation sets but sill the validation accuracy never approachs to 90% . After applied a rotation transformation which rotates the all images in the range of angles between -10 and 10 with a step of 2 degree interval using OpenCV liberary(cv2). This transformation not only increases the number of training sets and validation sets conmibed to more than 650,000 images but also jumps the validation accuracy to cloth to 99% with only 20 iterations made. I also have applied normalization and gray-scale converion after rotaion transformation on images was applied, however din't imporve model performance while in the contrary. I also have tried to modifiy the model architecture given above however never was I lucky to get model accurcy to above 50%. Then decided to stick the model architecture provided in the above section.  
 
 My final model results were:
-* training set accuracy of = 99.9
+* training set accuracy of = 100
 * validation set accuracy of = 99.9
 * test set accuracy of =94.6
 
@@ -151,10 +133,9 @@ If a well known architecture was chosen:
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+To test the model's skills in predicting new images , I have taken about 24 traffic sign images from the internet and processied the images to imput them into the model. I have applied histogram equlizer on the new images. The following are the new traffic sign images I used for assessing model's skills in predicting new images. 
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][( https://github.com/kulu80/Traffic_Sign_Classifier-DeepLearning-/blob/master/new_images.png)] 
 
 The first image might be difficult to classify because ...
 
