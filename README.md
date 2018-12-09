@@ -207,5 +207,4 @@ for the fifth image : Roundabout mandatory
 
 
 
-### Project Review/Evaluation
-[https://review.udacity.com/#!/reviews/656357](https://review.udacity.com/#!/reviews/656357)
+
